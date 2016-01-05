@@ -2,9 +2,9 @@
 <div ng-app="app">
   <div ng-controller="peopleCtrl">
     <ul>
-      <li ng-repeat="bio in bios">
-        <p>Name: {{ bio.name }}</p>
-        <p>Bio: {{ bio.bio }}</p>
+      <li ng-repeat="bio in bios track by $index">
+        <p ng-click="toggleBioVisible($index)">Name: {{ bio.name }}</p>
+        <p ng-if="bio.bioVisible">Bio: {{ bio.bio }}</p>
     </ul>
     <div>
   </div>

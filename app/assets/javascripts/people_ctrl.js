@@ -14,7 +14,16 @@
         bioVisible: false
       }
     ];
+
+    $scope.showBio = function(index) {
+      if ($scope.bios[index].bioVisible === true) {
+        
+      };
+    };
     
+    $scope.toggleBioVisible = function(index) {
+      $scope.bios[index].bioVisible = !$scope.bios[index].bioVisible;
+    };
 
     window.$scope = $scope;
   });
