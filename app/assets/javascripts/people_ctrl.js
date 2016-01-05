@@ -2,7 +2,7 @@
 (function() {
   'use strict';
   angular.module('app').controller('peopleCtrl', function($scope) {
-    $scope.bios = [
+    $scope.people = [
       {
         name: 'Sally Jones',
         bio: 'Long walks on a beach and short naps in the sand.',
@@ -15,13 +15,13 @@
       }
     ];
     
-    $scope.toggleBioVisible = function(index) {
-      $scope.bios[index].bioVisible = !$scope.bios[index].bioVisible;
+    $scope.toggleBioVisible = function(inputIndex) {
+      $scope.people[inputIndex].bioVisible = !$scope.people[inputIndex].bioVisible;
     };
 
     $scope.addBio = function(inputName, inputBio) {
       if (inputName !== '' && inputBio !== '') {
-        $scope.bios.push({
+        $scope.people.push({
           name: inputName,
           bio: inputBio,
           bioVisible: false
@@ -32,7 +32,7 @@
     };
 
     $scope.deleteBio = function($index) {
-      $scope.bios.splice($index, 1);
+      $scope.people.splice($index, 1);
     };
 
     window.$scope = $scope;

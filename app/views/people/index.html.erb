@@ -1,12 +1,12 @@
 <h3>People Bios:</h3>
 <div ng-app="app">
   <div ng-controller="peopleCtrl">
-    <h4>Current number of bios: {{ bios.length }}</h4>
+    <h4>Current number of bios: {{ people.length }}</h4>
     <ul>
-      <li ng-repeat="bio in bios track by $index">
-        <p ng-click="toggleBioVisible($index)">Name: {{ bio.name }}</p>
+      <li ng-repeat="person in people">
+        <p ng-click="toggleBioVisible($index)">Name: {{ person.name }}</p>
+        <p ng-if="person.bioVisible">Bio: {{ person.bio }}</p>
         <button ng-click="deleteBio($index)">Delete this Bio</button>
-        <p ng-if="bio.bioVisible">Bio: {{ bio.bio }}</p>
     </ul>
     <div>
       <h4>Add a new Bio:</h4>
