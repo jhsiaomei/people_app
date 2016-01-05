@@ -1,3 +1,11 @@
+<h3>People Bios:</h3>
 <div ng-app="app">
-  {{ 1 + 1 }}
+  <div ng-controller="peopleCtrl">
+    <ul>
+      <li ng-repeat="bio in bios">
+        <p>Name: {{ bio.name }}</p>
+        <p>Bio: {{ bio.bio }}</p>
+    </ul>
+    <div>
+  </div>
 </div>
