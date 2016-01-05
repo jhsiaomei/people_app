@@ -5,13 +5,14 @@
     <ul>
       <li ng-repeat="bio in bios track by $index">
         <p ng-click="toggleBioVisible($index)">Name: {{ bio.name }}</p>
+        <button ng-click="deleteBio($index)">Delete this Bio</button>
         <p ng-if="bio.bioVisible">Bio: {{ bio.bio }}</p>
     </ul>
     <div>
       <h4>Add a new Bio:</h4>
       <p>Name: <input ng-model="newName"></p>
       <p>Bio: <input ng-model="newBio"></p>
-      </br><button ng-click="addBio(newName, newBio)">Add bio</button>
+      <p><button ng-click="addBio(newName, newBio)">Add bio</button></p>
     </div>
   </div>
 </div>

@@ -31,6 +31,10 @@
       };
     };
 
+    $scope.deleteBio = function($index) {
+      $scope.bios.splice($index, 1);
+    };
+
     window.$scope = $scope;
   });
 })();
