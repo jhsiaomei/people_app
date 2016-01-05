@@ -7,5 +7,10 @@
         <p ng-if="bio.bioVisible">Bio: {{ bio.bio }}</p>
     </ul>
     <div>
+      <h4>Add a new Bio:</h4>
+      <p>Name: <input ng-model="newName"></p>
+      <p>Bio: <input ng-model="newBio"></p>
+      </br><button ng-click="addBio(newName, newBio)">Add bio</button>
+    </div>
   </div>
 </div>

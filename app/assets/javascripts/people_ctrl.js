@@ -14,15 +14,21 @@
         bioVisible: false
       }
     ];
-
-    $scope.showBio = function(index) {
-      if ($scope.bios[index].bioVisible === true) {
-        
-      };
-    };
     
     $scope.toggleBioVisible = function(index) {
       $scope.bios[index].bioVisible = !$scope.bios[index].bioVisible;
+    };
+
+    $scope.addBio = function(inputName, inputBio) {
+      if (inputName !== '' && inputBio !== '') {
+        $scope.bios.push({
+          name: inputName,
+          bio: inputBio,
+          bioVisible: false
+        });
+        $scope.newName = '';
+        $scope.newBio = '';
+      };
     };
 
     window.$scope = $scope;
